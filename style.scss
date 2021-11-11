@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+$brightOrange: hsl(31, 77%, 52%);
+$darkCyan: hsl(184, 100%, 22%);
+$veryDarkCyan: hsl(179, 100%, 13%);
+$transparentWhite: hsla(0, 0%, 100%, 0.75); //(paragraphs)
+$veryLightGray: hsl(0, 0%, 95%); //(background, headings, buttons)
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: $veryLightGray;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: "Big Shoulders Display", cursive;
+}
+
+p,
+a {
+  font-size: 1.6rem;
+}
+
+p {
+  color: $transparentWhite;
+  margin-bottom: 10rem;
+  line-height: 2.5rem;
+}
+
+h1 {
+  color: $veryLightGray;
+  margin: 2rem 0;
+}
+
+a {
+  background-color: $veryLightGray;
+  padding: 1.1rem 2.2rem;
+  border-radius: 2rem;
+  text-decoration: none;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
+  margin: 3rem;
+}
+
+.card {
+  padding: 4rem;
+  max-width: 300px;
+}
+
+.card a:hover {
+  color: $veryLightGray;
+  border: $veryLightGray 0.2rem solid;
+  background-color: transparent;
+}
+
+.card1 {
+  background-color: $brightOrange;
+  border-radius: 1rem 0 0 1rem;
+
+  a {
+    color: $brightOrange;
+  }
+}
+
+.card2 {
+  background-color: $darkCyan;
+  a {
+    color: $darkCyan;
+  }
+}
+
+.card3 {
+  background-color: $veryDarkCyan;
+  border-radius: 0 1rem 1rem 0;
+
+  a {
+    color: $veryDarkCyan;
+  }
+}
+
+@media screen and (min-width: 660px) and (max-width: 959px) {
+  .card2 {
+    border-radius: 0 1rem 1rem 0;
+  }
+  .card3 {
+    border-radius: 0 0 1rem 1rem;
+  }
+}
+
+@media only screen and (max-width: 659px) {
+  .card1 {
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  .card3 {
+    border-radius: 0 0 1rem 1rem;
+  }
+}
